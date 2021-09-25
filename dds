@@ -1,0 +1,106 @@
+[33mcommit 5722073c2bc2d6241d847de17f8d8721a6fe0004[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: GBHBLT <15776547151@163.com>
+Date:   Mon Sep 6 23:42:18 2021 +0800
+
+    ES学习数据
+
+ ES/.gitignore                                      |     33 [32m+[m
+ ES/.mvn/wrapper/MavenWrapperDownloader.java        |    118 [32m+[m
+ ES/.mvn/wrapper/maven-wrapper.jar                  |    Bin [31m0[m -> [32m50710[m bytes
+ ES/.mvn/wrapper/maven-wrapper.properties           |      2 [32m+[m
+ ES/mvnw                                            |    310 [32m+[m
+ ES/mvnw.cmd                                        |    182 [32m+[m
+ ES/pom.xml                                         |    102 [32m+[m
+ ES/src/main/java/com/example/es/EsApplication.java |     16 [32m+[m
+ .../main/java/com/example/es/dao/ProductDao.java   |     32 [32m+[m
+ ES/src/main/java/com/example/es/model/Product.java |     73 [32m+[m
+ .../java/com/example/es/model/ProductExample.java  |    593 [32m+[m
+ .../com/example/es/utils/ESClientBuilders.java     |     96 [32m+[m
+ ES/src/main/resources/application.yml              |     12 [32m+[m
+ ES/src/main/resources/mapper/ProductDao.xml        |    221 [32m+[m
+ .../java/com/example/es/EsApplicationTests.java    |     82 [32m+[m
+ ESCode/.gitignore                                  |     31 [32m+[m
+ ESCode/.mvn/wrapper/MavenWrapperDownloader.java    |    118 [32m+[m
+ ESCode/.mvn/wrapper/maven-wrapper.jar              |    Bin [31m0[m -> [32m50710[m bytes
+ ESCode/.mvn/wrapper/maven-wrapper.properties       |      2 [32m+[m
+ ESCode/mvnw                                        |    310 [32m+[m
+ ESCode/mvnw.cmd                                    |    182 [32m+[m
+ ESCode/pom.xml                                     |     88 [32m+[m
+ ESCode/src/main/java/com/msb/es/EsApplication.java |     15 [32m+[m
+ .../com/msb/es/controller/ClientController.java    |     36 [32m+[m
+ .../src/main/java/com/msb/es/entity/Product.java   |     21 [32m+[m
+ .../main/java/com/msb/es/mapper/ProductMapper.java |      7 [32m+[m
+ .../java/com/msb/es/service/ProductService.java    |     10 [32m+[m
+ ESCode/src/main/resources/application.properties   |      1 [32m+[m
+ ESCode/src/main/resources/application.yml          |     37 [32m+[m
+ .../test/java/com/msb/es/EsApplicationTests.java   |    464 [32m+[m
+ ESCode2/.gitignore                                 |     31 [32m+[m
+ ESCode2/.mvn/wrapper/MavenWrapperDownloader.java   |    118 [32m+[m
+ ESCode2/.mvn/wrapper/maven-wrapper.jar             |    Bin [31m0[m -> [32m50710[m bytes
+ ESCode2/.mvn/wrapper/maven-wrapper.properties      |      2 [32m+[m
+ ESCode2/mvnw                                       |    310 [32m+[m
+ ESCode2/mvnw.cmd                                   |    182 [32m+[m
+ ESCode2/pom.xml                                    |     98 [32m+[m
+ .../src/main/java/com/msb/es/EsApplication.java    |     15 [32m+[m
+ .../com/msb/es/controller/ClientController.java    |    268 [32m+[m
+ .../src/main/java/com/msb/es/dto/ResultDto.java    |     17 [32m+[m
+ .../java/com/msb/es/entity/CarSerialBrand.java     |     21 [32m+[m
+ .../src/main/java/com/msb/es/entity/Product.java   |     21 [32m+[m
+ .../msb/es/mapper/CarSerialBrandServiceMapper.java |      7 [32m+[m
+ .../main/java/com/msb/es/mapper/ProductMapper.java |      7 [32m+[m
+ .../com/msb/es/service/CarSerialBrandService.java  |     10 [32m+[m
+ .../java/com/msb/es/service/ProductService.java    |     10 [32m+[m
+ .../src/main/java/com/msb/es/util/ESClient.java    |     95 [32m+[m
+ ESCode2/src/main/resources/application.properties  |      1 [32m+[m
+ ESCode2/src/main/resources/application.yml         |     37 [32m+[m
+ .../src/test/java/com/msb/es/ClientBuilders.java   |    108 [32m+[m
+ .../test/java/com/msb/es/ESApplicationTests.java   |    591 [32m+[m
+ ESCode2/src/test/java/com/msb/es/EsUtil.java       |    179 [32m+[m
+ .../src/test/java/com/msb/es/HighLevelClient.java  |     52 [32m+[m
+ .../elasticsearch-analysis-ik-7.6.2/.travis.yml    |      9 [32m+[m
+ .../elasticsearch-analysis-ik-7.6.2/README.md      |    261 [32m+[m
+ .../config/IKAnalyzer.cfg.xml                      |     13 [32m+[m
+ .../config/extra_main.dic                          | 398716 [32m++++++++++++++++++[m
+ .../config/extra_single_word.dic                   |  12638 [32m+[m
+ .../config/extra_single_word_full.dic              |  12638 [32m+[m
+ .../config/extra_single_word_low_freq.dic          |   2714 [32m+[m
+ .../config/extra_stopword.dic                      |     31 [32m+[m
+ .../config/main.dic                                | 275909 [32m++++++++++++[m
+ .../config/preposition.dic                         |     25 [32m+[m
+ .../config/quantifier.dic                          |    316 [32m+[m
+ .../config/stopword.dic                            |     33 [32m+[m
+ .../config/suffix.dic                              |     37 [32m+[m
+ .../config/surname.dic                             |    131 [32m+[m
+ .../licenses/lucene-LICENSE.txt                    |    475 [32m+[m
+ .../licenses/lucene-NOTICE.txt                     |    191 [32m+[m
+ .../elasticsearch-analysis-ik-7.6.2/pom.xml        |    269 [32m+[m
+ .../src/main/assemblies/plugin.xml                 |     45 [32m+[m
+ .../index/analysis/IkAnalyzerProvider.java         |     31 [32m+[m
+ .../index/analysis/IkTokenizerFactory.java         |     34 [32m+[m
+ .../plugin/analysis/ik/AnalysisIkPlugin.java       |     41 [32m+[m
+ .../java/org/wltea/analyzer/cfg/Configuration.java |     75 [32m+[m
+ .../org/wltea/analyzer/core/AnalyzeContext.java    |    396 [32m+[m
+ .../java/org/wltea/analyzer/core/CJKSegmenter.java |    126 [32m+[m
+ .../analyzer/core/CN_QuantifierSegmenter.java      |    239 [32m+[m
+ .../org/wltea/analyzer/core/CharacterUtil.java     |    102 [32m+[m
+ .../java/org/wltea/analyzer/core/IKArbitrator.java |    152 [32m+[m
+ .../java/org/wltea/analyzer/core/IKSegmenter.java  |    147 [32m+[m
+ .../java/org/wltea/analyzer/core/ISegmenter.java   |     46 [32m+[m
+ .../org/wltea/analyzer/core/LetterSegmenter.java   |    290 [32m+[m
+ .../main/java/org/wltea/analyzer/core/Lexeme.java  |    284 [32m+[m
+ .../java/org/wltea/analyzer/core/LexemePath.java   |    256 [32m+[m
+ .../java/org/wltea/analyzer/core/QuickSortSet.java |    239 [32m+[m
+ .../java/org/wltea/analyzer/dic/DictSegment.java   |    326 [32m+[m
+ .../java/org/wltea/analyzer/dic/Dictionary.java    |    576 [32m+[m
+ .../src/main/java/org/wltea/analyzer/dic/Hit.java  |    117 [32m+[m
+ .../main/java/org/wltea/analyzer/dic/Monitor.java  |    111 [32m+[m
+ .../org/wltea/analyzer/help/CharacterHelper.java   |     60 [32m+[m
+ .../wltea/analyzer/help/ESPluginLoggerFactory.java |     27 [32m+[m
+ .../wltea/analyzer/help/PrefixPluginLogger.java    |     48 [32m+[m
+ .../main/java/org/wltea/analyzer/help/Sleep.java   |     38 [32m+[m
+ .../java/org/wltea/analyzer/lucene/IKAnalyzer.java |     67 [32m+[m
+ .../org/wltea/analyzer/lucene/IKTokenizer.java     |    130 [32m+[m
+ .../main/resources/plugin-descriptor.properties    |     56 [32m+[m
+ .../src/main/resources/plugin-security.policy      |      4 [32m+[m
+ ...75\246\345\236\213\346\225\260\346\215\256.zip" |    Bin [31m0[m -> [32m26079345[m bytes
+ 99 files changed, 713843 insertions(+)
